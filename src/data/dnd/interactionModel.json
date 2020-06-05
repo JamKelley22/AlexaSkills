@@ -1,0 +1,102 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "the monster manual",
+      "modelConfiguration": {
+        "fallbackIntentSensitivity": {
+          "level": "LOW"
+        }
+      },
+      "intents": [
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "GetMonster",
+          "slots": [
+            {
+              "name": "monster",
+              "type": "MONSTERS"
+            }
+          ],
+          "samples": ["get {monster}", "tell me about {monster}"]
+        },
+        {
+          "name": "GetRandomMonster",
+          "slots": [],
+          "samples": [
+            "get a monster",
+            "tell me about a monster",
+            "random monster",
+            "tell me about a random monster",
+            "get a random monster"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "name": "MONSTERS",
+          "values": [
+            {
+              "name": {
+                "value": "Rug of Smothering"
+              }
+            },
+            {
+              "name": {
+                "value": "Flying Sword"
+              }
+            },
+            {
+              "name": {
+                "value": "Animated Armor"
+              }
+            },
+            {
+              "name": {
+                "value": "Solar"
+              }
+            },
+            {
+              "name": {
+                "value": "Planetar"
+              }
+            },
+            {
+              "name": {
+                "value": "Deva"
+              }
+            },
+            {
+              "name": {
+                "value": "Aboleth"
+              }
+            },
+            {
+              "name": {
+                "value": "Aarakocra"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
