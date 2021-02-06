@@ -1,4 +1,4 @@
-export enum CustomIntentHandlerType {
+export enum DnDIntentHandlerType {
   GetMonster,
   GetRandomMonster,
 }

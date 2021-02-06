@@ -1,1 +1,4 @@
-export enum CustomIntentHandlerType {}
+export enum CocktailIntentHandlerType {
+  GetRandomCocktail,
+  GetCocktail,
+}

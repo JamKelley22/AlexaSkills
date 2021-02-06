@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "cocktail",
+      "invocationName": "cocktail captain",
       "modelConfiguration": {
         "fallbackIntentSensitivity": {
           "level": "LOW"
@@ -31,7 +31,17 @@
         {
           "name": "GetRandomCocktail",
           "slots": [],
-          "samples": ["random cocktail", "get a random cocktail"]
+          "samples": ["get random cocktail"]
+        },
+        {
+          "name": "GetCocktail",
+          "slots": [
+            {
+              "name": "cocktailName",
+              "type": "AMAZON.Drink"
+            }
+          ],
+          "samples": ["Tell me about {cocktailName}", "Get {cocktailName}"]
         }
       ],
       "types": []

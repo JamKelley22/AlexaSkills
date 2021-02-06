@@ -10,7 +10,10 @@ import { CustomSkill } from "ask-sdk-core/dist/skill/CustomSkill";
 import { DefaultHandlers, DefaultInterceptors } from "./defaults";
 
 import { IntentHandlerType } from "./data/types";
-import { CustomIntentHandlerType } from "./data/dnd/types";
+import { DnDIntentHandlerType } from "./data/dnd/types";
+import { CocktailIntentHandlerType } from "./data/cocktail/types";
+
+type CustomIntentHandlerType = DnDIntentHandlerType | CocktailIntentHandlerType;
 
 export class MyCustomSkill {
   interactionModel: InteractionModel;

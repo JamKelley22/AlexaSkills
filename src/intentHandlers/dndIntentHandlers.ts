@@ -2,11 +2,11 @@ import {
   RequestType,
   SlotResolutionStatusCode,
   IInteractionModel,
-} from "./types";
+} from "../types";
 import { RequestHandler, HandlerInput } from "ask-sdk-core";
 import { IntentRequest, Response } from "ask-sdk-model";
-import { getSlotValues } from "./util";
-import { InterationModelType } from "./data";
+import { getSlotValues } from "../util";
+import { InterationModelType } from "../data";
 
 export const GetMonster_Handler = (
   model: IInteractionModel

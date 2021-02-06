@@ -1,7 +1,8 @@
 import MyCustomSkill from "./skillBuilder";
 import * as Data from "./data";
-import { CustomIntentHandlerType } from "./data/dnd/types";
-import * as CustomIntentHandler from "./intentHandlers";
+import { DnDIntentHandlerType } from "./data/dnd/types";
+import { DnDIntentHandlers, CocktailIntentHandlers } from "./intentHandlers";
+import { CocktailIntentHandlerType } from "./data/cocktail/types";
 
 const { DnDInteractionModelJSON } = Data;
 
@@ -11,13 +12,20 @@ const CocktailSkill = new MyCustomSkill(
 );
 
 DnDSkill.addCustomIntentHandler(
-  CustomIntentHandlerType.GetMonster,
-  CustomIntentHandler.GetMonster_Handler(DnDSkill.getInteractionModel())
+  DnDIntentHandlerType.GetMonster,
+  DnDIntentHandlers.GetMonster_Handler(DnDSkill.getInteractionModel())
 );
 
 DnDSkill.addCustomIntentHandler(
-  CustomIntentHandlerType.GetRandomMonster,
-  CustomIntentHandler.GetRandomMonster_Handler(DnDSkill.getInteractionModel())
+  DnDIntentHandlerType.GetRandomMonster,
+  DnDIntentHandlers.GetRandomMonster_Handler(DnDSkill.getInteractionModel())
+);
+
+CocktailSkill.addCustomIntentHandler(
+  CocktailIntentHandlerType.GetRandomCocktail,
+  CocktailIntentHandlers.GetRandomCocktail_Handler(
+    CocktailSkill.getInteractionModel()
+  )
 );
 
 const MyDnDSkill = DnDSkill.create();

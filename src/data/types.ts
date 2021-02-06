@@ -5,9 +5,11 @@ export enum IntentName {
   HelpIntent = "AMAZON.HelpIntent",
   StopIntent = "AMAZON.StopIntent",
   NavigateHomeIntent = "AMAZON.NavigateHomeIntent",
+  LaunchRequest = "LaunchRequest",
   GetMonster = "GetMonster",
   GetRandomMonster = "GetRandomMonster",
-  LaunchRequest = "LaunchRequest",
+  GetCocktail = "GetCocktail",
+  GetRandomCocktail = "GetRandomCocktail",
 }
 
 export enum IntentHandlerType {
